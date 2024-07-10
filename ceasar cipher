@@ -27,15 +27,20 @@ shift = int(input("Type the shift number:\n"))
 #elif direction == "decode":
 #  decrypt(cipher_text=text, shift_amount=shift)
 
+# remember 'texty' is your input string
 def ceasar(texty, shifty, direction):
+  # you need a different string to hold the output
   texty = ""
   for letter in texty:
     position = alphabet.index(letter)
     if direction == 'encode':
       new_position = position + shifty
+      # you should add to your output string here
       texty += alphabet[new_position]
+      # this will print 'the encoded text is ...' for every letter in texty
       print(f"The encoded text is {texty}")
 
+    # the two hints above also count here
     elif direction == 'decode':
       new_position = position - shifty
       texty += alphabet[new_position]
